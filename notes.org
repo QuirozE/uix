@@ -7,4 +7,24 @@
 
 * UML
 
-¿Cómo se diseña un sistema de software a nivel profesional?
+En cualquier intento colaborativo para desarrollar software debe haber una forma
+de especificar que se va a hacer. En equipos grandes y multidisciplinario esto
+es un problema, pues comunicación directa no es práctica, y las diferentes áreas
+de todos no permiten usar lenguaje técnico.
+
+Para resolver esto se creó UML (Universal Modelling Language). Es un estándar de
+decenas de diferentes tipos de diagramas, cada uno de ellos especializado en
+especificar algún aspecto del sistema de software de manera simple y no técnica.
+
+** Diagramas de clases
+
+Permiten modelar parte del sistema de software usando orientación a objetos.
+En breve, diferentes elementos y actores se agrupan en clases. Cada clase tiene
+ciertas caracterísicas propias, y puede interactuar con las otras clases a
+través de métodos.
+
+** Diagramas de flujo
+
+Permiten modelar un algoritmo. Se pueden tomar decisiones, asignar variables y
+definir ciclos. Estos algoritmos normalmente reflejan un proceso que se quiere
+automatizar en el sistema.
