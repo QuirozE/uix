@@ -23,12 +23,12 @@ de uso que se estudiará durante el semestre.
 
 ## Horario
 
-|    | Lunes    | Martes   | Miércoles   | Jueves   | Viernes  |
-|----|----------|----------|-------------|----------|----------|
-| 9  |          | Ayudante | Profesor    |          |        |
-| 10 |          |          |             |          |          |
-| 11 |          |          |             |          |          |
-| 12 |          |          | Laboratorio |          |          |
-| 13 |          |          | Laboratorio |          |          |
-| 14 |          |          |             |          |          |
+|    | Lunes    | Martes      | Miércoles   | Jueves   | Viernes  |
+|----|----------|-------------|-------------|----------|----------|
+| 9  |          | Ayudante    | Profesor    |          |          |
+| 10 |          |             |             |          |          |
+| 11 |          |             |             |          |          |
+| 12 |          | Laboratorio |             |          |          |
+| 13 |          | Laboratorio |             |          |          |
+| 14 |          |             |             |          |          |
 
