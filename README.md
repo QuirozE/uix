@@ -16,7 +16,8 @@ Con los profesores se revisará la teoría, además de evaluar y estudiar alguno
 ejemplos reales.
 
 En las ayudantías de igual manera se explorarán ejemplos reales, se evaluarán y
-se propondrán mejoras.
+se propondrán mejoras. Habrá tareas cortas como evaluación a entregar los
+domingos.
 
 Las prácticas se realizarán por Github Classroom. Estas serán sobre un caso
 de uso que se estudiará durante el semestre.
