@@ -8,26 +8,58 @@
 * UML
 
 En cualquier intento colaborativo para desarrollar software debe haber una forma
-de especificar que se va a hacer. En equipos grandes y multidisciplinario esto
-es un problema, pues comunicación directa no es práctica, y las diferentes áreas
-de todos no permiten usar lenguaje técnico.
+de *especificar* que se va a hacer. Hay dos casos extremos potencialmente
+problemáticos. Primero en *equipos grandes* y multidisciplinario. Aquí la
+comunicación directa no es práctica, y las diferentes áreas de todos no permiten
+usar lenguaje técnico. El otro caso sería cuando hay un *proyecto grande*, tal
+que no es factible que todos los miembros del equipo entiendan todo el sistema.
 
-Para resolver esto se creó UML (Universal Modelling Language). Es un estándar de
-decenas de diferentes tipos de diagramas, cada uno de ellos especializado en
-especificar algún aspecto del sistema de software de manera simple y no técnica.
+Para resolver esto se creó *UML* (Universal Modelling Language). Es un estándar
+de decenas de diferentes tipos de diagramas, cada uno de ellos especializado en
+*especificar un aspecto* del sistema de software de manera *simple y no técnica*
+
+*Nota*: al iniciar un trabajo en una empresa de software, pedir toda la
+documentación disponible para entender como funciona el proyecto donde vas a
+trabajar.
 
 ** Diagramas de clases
 
-Permiten modelar parte del sistema de software usando orientación a objetos.
-En breve, diferentes elementos y actores se agrupan en clases. Cada clase tiene
-ciertas caracterísicas propias, y puede interactuar con las otras clases a
-través de métodos.
+Permiten modelar parte del sistema de software usando *orientación a objetos*.
+En breve, diferentes elementos y actores se agrupan en *clases*. Cada clase
+tiene ciertas caracterísicas propias, y puede interactuar con las otras clases a
+través de *métodos*.
 
 ** Diagramas de flujo
 
-Permiten modelar un algoritmo. Se pueden tomar decisiones, asignar variables y
-definir ciclos. Estos algoritmos normalmente reflejan un proceso que se quiere
+Permiten modelar un *algoritmo*. Se pueden tomar decisiones, asignar variables y
+definir ciclos. Estos algoritmos normalmente reflejan un *proceso* que se quiere
 automatizar en el sistema.
+
+Todos los sistemas tienen un flujo de actividades. A grandes rasgos siempre es
+útil modelar el flujo, sin importar el tamaño del proyecto.
+
+** Diagrama de secuencia
+
+Describe *como y en que orden* interactuan las diferentes entidades que
+participan en un flujo. Pueden incluir tanto flujos *exitosos*, flujos
+*fallidos* o flujos *excepcionales*.
+
+** Diagrama de despliegue
+
+Describe la *implementación física* del sistema, i.e. los servidores, y como
+estén conectados entre sí. Si se usa un servicio de alojamiento, generalmente
+tiene herramientas para crear estos diagramas, como es el caso de *AWS*.
+
+** Diagramas de casos de uso
+
+Describe la *funcionalidad específica* (paso a paso) de un sistema para los
+diferentes *tipos de usuario*. Tener bien identificados todos las
+funcionalidades permite crear interfaces más especializadas.
+
+Determinar las funcionalidades requiere un *análisis de requerimientos*.
+
+*Nota*: el análisis de requerimientos es un buen punto de partida para diseñar
+una interfaz, aunque es algo bastante posterior.
 
 
 * Interacciones Humano-Máquina
