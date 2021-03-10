@@ -62,6 +62,72 @@ Determinar las funcionalidades requiere un *análisis de requerimientos*.
 una interfaz, aunque es algo bastante posterior.
 
 
+* Generalidades de usabilidad
+
+Segun la *ISO/IEC9241-11*, es una medidad sobre que tan útil es un producto de
+software para que cierto grupo de usuarios para realizar actividades especificos
+de forma eficaz. Midiendo estas caracterísiticas se pueden medir la usabilidad
+de un sistema.
+
+Es diferente de parte de marketing, ergonomía o accesibilidad. Debe fácil de
+usar, productivo, cumple las metas funcionales. De forma intuitiva, es la
+"calidad" del producto de software. Se logra con una mezcla de buen diseño y
+buen funcionamiento.
+
+** Generalidades para diseñar
+
+Al diseñar el sistema, se debe adaptar al usuario, ocultando las complejidades
+del sistema. Esto se hace por medio de interfaces gráficas, auditivas, tactil,
+movimiento, navegación.
+
+
+Hay que perfilar el tipo de usuario. Para esto se suelen usar herramientas como
+los arquetipos de usuario o los mapas de empatía (a revisar a fondo después).
+
+Luego, definir las tareas a realizar (*historias de usuario*) y que se necesita
+para hacerlo. Es decir, entender lo que los usuarios quieren, observar los
+lugares de trabajo, indentificar sus necesidades (tanto como las que te dan
+explícitamente como las que tú identificaste) y diseñar soluciones a estas
+necesidades. Esto se conoce como principio de *diseño centrado en usuario*.
+
+Además de esto, hay que revisar los posibles contextos, como el tipo de equipo
+donde se usará el sistema, conexión, el lugar físico.
+
+Algunos consejos al respecto son
+
++ Poner exactamente lo necesario, ni menos ni más (incluyendo multimedia)
++ No dejar de lado la legilibilidad
++ No dejar de lado la navegación
++ Mantener consistencia visual
++ Facilitar la instalación/carga
+
+Algunos problemas comunes pueden ser
+
++ Priorizar el diseño o el funcionamiento
++ *Iniciar etapas sin tener toda la información*
++ Solo un área tome las decisiones
++ Usar tecnologías nuevas
++ *Intentar generaizar el diseño mas de lo necesario*
++ *No ser flexible a las necesidades*
++ Los directivos tiene la última palabra
+
+Algunos consejos para evaluar el diseño pueden ser
+
++ Muestra representativa de usuarios
++ Tareas breves y específicas
++ Ambiente controlado (laoboratorio de usabilidad)
++ Hacer pruebas de usabilidad y pruebas de /experiencia/
+
+Si se logra un buen diseño, se tendrá como corolario que
+
++ No habrá secciones meramente estéticas
++ Habrá pocos usuarios que decerten
++ Los usuarios estarán satisfechos
++ Se adoptará el producto rápidamente
++ Se podrá mandar un mensaje emocional a los usuarios
+
+*Tarea*: leer artículo, probar aplicación y proponer mejoras.
+
 * Interacciones Humano-Máquina
 
 Estudia el diseño, evaluación e implementación de sistemas computacionales
@@ -92,6 +158,5 @@ máquina, y modificaciones a su funcionamiento tomaba semanas.
 
 Una mejora a esto fue la introducción de *teletipos* (con tarjetas perforadas).
 Esto facilitaba la forma de modificar el software de la máquina.
-
 En 1968, Xerox creó la primera *interfaz gráfica*. Poseía un mouse, ventanas,
 íconos y menúes.
