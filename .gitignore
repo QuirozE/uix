@@ -283,5 +283,5 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
-# Ingore generated `notes.tex`
-notes.tex
+# Ingore generated LaTex files
+*.tex
