@@ -1,0 +1,65 @@
+#+title: Serpientes y Escaleras a distancia
+#+subtitle: Versión de sólo texto para Google Meet
+#+options: toc:nil
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=1.5cm]{geometry}
+#+latex_header: \usepackage{arev}
+
+* Planteamiento
+
+El objetivo es comprobar la necesidad de adaptar las reglas cuando el medio
+cambia. Deberán crear reglas adaptadas para jugar el juego de mesa de Serpientes
+y Escaleras, suponiendo que se va a jugar vía videoconferencia y la mayoría de
+los participantes por problema de conectividad no pueden prender su cámara ni su
+micrófono.
+
+La tarea debe ser un corto documento que incluya el nombre del alumno, las
+reglas adaptadas y las observaciones que consideren necesarias de su adaptación
+(que no se puede realizar, que sí o porque de cierta adaptación especial)
+
+* Descripción
+
+Al no tener acceso a un tablero común para ver las posiciones de los demás, en
+esta versión se va a considerar un encargado para llevar registro de estos
+datos. Se le denomina "moderador".
+
+** Moderador
+
+#+begin_src plantuml :file moderador_flux.png
+start
+repeat
+  :espera siguiente jugador;
+  :lanza dado;
+  :mueve al jugador;
+  :muestra el tablero;
+  :indica evento;
+repeat while (¿hay un ganador?) is (no)
+:indica al ganador;
+stop
+#+end_src
+
+#+caption: Flujo de actividades para el moderador
+#+label: fig:mod-flux
+#+attr_latex: :scale 0.75
+#+results:
+[[file:moderador_flux.png]]
+
+** Jugador
+
+#+begin_src plantuml :file player_flux.png
+start
+:registrarse;
+repeat
+:esperar su turno;
+:pedir la jugada;
+:ver el tablero;
+repeat while(¿hay un ganador?) is (no)
+stop
+#+end_src
+
+#+caption: Flujo para el jugador
+#+label: fig:player-fulx
+#+attr_latex: :scale 0.75
+#+results:
+[[file:player_flux.png]]
