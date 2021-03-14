@@ -18,7 +18,76 @@ La tarea debe ser un corto documento que incluya el nombre del alumno, las
 reglas adaptadas y las observaciones que consideren necesarias de su adaptación
 (que no se puede realizar, que sí o porque de cierta adaptación especial)
 
-* Descripción
+* Reglas tradicionales
+
+Normalmente se tiene un tablero rectangular con casillas numeradas desde el 1.
+Algunas casilla están conectadas por serpientes o escaleras, de tal forma que
+la boca de las serpientes siempre está en una casilla superior y la base de las
+escaleras siempre está en una casilla inferior. Estás tienen el siguiente
+funcionamiento
+
++ Al caer en la boca de una serpiente hay que moverse a la cola de la serpiente
++ Al caer en la base de una escalera hay que moverse a la cima de la escalera.
+
+Además, si se se lanza el dado y se requiere mover a casillas más allá de la
+última, se debe recorrer las casillas extra en sentido inverso. La manera de
+moverse está resumida en la figura \ref{fig:move-flux}.
+
+#+begin_src plantuml :file imgs/move_flux.png
+start
+:lanzar dado;
+:mover la ficha
+la cantidad de lugares
+que indique el dado;
+:si se pasa de la
+última casilla, se mueven
+el resto de los
+movimientos en sentido
+contrario;
+:si se llega a la boca de
+una serpiente, se mueve a
+la cola;
+:si se llega a la base de
+una escalera se mueve a
+la cima;
+stop
+#+end_src
+
+#+caption: Pasos para moverse en una jugada.
+#+label: fig:move-flux
+#+attr_latex: :scale 0.75
+#+results:
+[[file:imgs/move_flux.png]]
+
+Para jugar además se necesitan al menos dos jugadores, un dado, una ficha por
+jugador y definir un orden para jugar. Al inicio del juego todos los jugadores
+colocan su ficha en la primera casilla. Cada vez que sea su turno deben
+
++ Lanzar el dado
++ Mover su ficha como se indicó anteriormente
++ Si se llega a la última casilla, gana.
+
+Cuando gané la primera persona se detiene el juego. El resumen de estas reglas
+se puede ver en la figura \ref{fig:normal-flux}.
+
+#+begin_src plantuml :file imgs/normal_flux.png
+start
+:poner ficha en casilla incial;
+repeat
+  :esperar su turno;
+  :lanzar dado;
+  :mover su ficha;
+repeat while(¿hay ganador?) is (no)
+stop
+#+end_src
+
+#+caption: Flujo normal del juego
+#+label: fig:normal-flux
+#+attr_latex: :scale 0.75
+#+results:
+[[file:imgs/normal_flux.png]]
+
+* Reglas modificadas
 
 Al no tener acceso a un tablero común para ver las posiciones de los demás, en
 esta versión se va a considerar un encargado para llevar registro de estos
@@ -26,14 +95,43 @@ datos. Se le denomina "moderador".
 
 ** Moderador
 
-#+begin_src plantuml :file moderador_flux.png
+El moderador será el encargado de tener registro de lo que normalmente se
+tendría en un tablero. Así que antes del juego debe
+
++ Decidir el tablero
++ Tener un espacio para registrar a los jugadores y su posición actual
++ Tener algún tipo de dado
+
+Al iniciar el juego debe
+
++ Anotar a los jugadores.
++ Indicar la posición de las serpientes y escaleras en el tablero.
+
+El orden en que se anoten será el orden en el que jugarán. Durante el juego se
+debe
+
++ Indicar a los jugadores cuando sea su turno
++ Esperar una confirmación de ellos
++ Tirar el dado y anunciar el resultado
++ Mover al jugador siguiendo las reglas normales
++ Indicar si se llegó a una serpiente, escalera o si ganó.
++ Anunciar la posición final del jugador.
+
+Se repetirá esto hasta que un jugador llegue a la casilla final. Entonces se
+anuncia al ganador y se termina el juego. El resumen de las acciones del
+moderador se puede ver en el la figura \ref{fig:mod-flux}.
+
+#+begin_src plantuml :file imgs/moderador_flux.png
 start
+:registrar jugadores;
+:mostrar serpientes y escaleras;
 repeat
-  :espera siguiente jugador;
-  :lanza dado;
-  :mueve al jugador;
-  :muestra el tablero;
-  :indica evento;
+  :indicar el turno al siguiente jugdor;
+  :esperar confirmación;
+  :lanzar dado;
+  :mover al jugador;
+  :indica evento (si hay);
+  :indicar posición final;
 repeat while (¿hay un ganador?) is (no)
 :indica al ganador;
 stop
@@ -43,23 +141,27 @@ stop
 #+label: fig:mod-flux
 #+attr_latex: :scale 0.75
 #+results:
-[[file:moderador_flux.png]]
+[[file:imgs/moderador_flux.png]]
 
 ** Jugador
 
-#+begin_src plantuml :file player_flux.png
+Como la mayor parte del trabajo la realiza el moderador, los jugadores
+simplemente tienen que indicar que quiere jugar, y luego esperar que el
+moderador les pida confirmar su turno. Este flujo se puede ver en la figura
+\ref{fig:player-flux}.
+
+#+begin_src plantuml :file imgs/player_flux.png
 start
 :registrarse;
 repeat
 :esperar su turno;
 :pedir la jugada;
-:ver el tablero;
 repeat while(¿hay un ganador?) is (no)
 stop
 #+end_src
 
 #+caption: Flujo para el jugador
-#+label: fig:player-fulx
+#+label: fig:player-flux
 #+attr_latex: :scale 0.75
 #+results:
-[[file:player_flux.png]]
+[[file:imgs/player_flux.png]]
