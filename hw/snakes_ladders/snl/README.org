@@ -1,0 +1,91 @@
+#+title: Serpientes y Escaleras a distancia
+#+subtitle: Versión de sólo texto para Google Meet
+#+options: toc:nil
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=1.5cm]{geometry}
+#+latex_header: \usepackage{arev}
+#+latex_header: \usepackage{minted}
+
+* Planteamiento
+
+Diseñar un pequeño ~CLI~ para el juego de serpientes y escaleras planteado
+anteriormente.
+
+** Diagramas de clases
+
+#+begin_src mermaid :file imgs/mod_class.png
+classDiagram
+
+  class Trap {
+    -Tuple~int,int~ j
+    +goesUp() bool
+    +goesDown() bool
+  }
+
+  class Board {
+    -Tuple~int,int~ dims
+    -Seq~Trap~ traps
+    +newBoard(dims,traps) Board
+    +dims() Tuple~int,int~
+    +hasTrap(pos) bool
+  }
+
+  class Player {
+    -string name
+    -int pos
+    -bool isWinner
+    -Socket conn
+    +newPlayer(name) Player
+    +advance(int)
+    +isWinner() bool
+  }
+
+  class Mod {
+    -Board b
+    -Seq~Player~ players
+    -Rand dice
+    -nextTurn()
+    +newMod(int,int) Mod
+    +register(int)
+    +play()
+  }
+#+end_src
+
+#+caption: Clases para el moderador
+#+label: fig:mod-class
+#+attr_latex: :scale 0.75
+#+results:
+[[file:imgs/mod_class.png]]
+
+#+begin_src mermaid :file imgs/player_class.png
+classDiagram
+
+  class Player {
+    -string name
+    -Socket conn
+    +newPlayer(string) Player
+    +register(int)
+    +play()
+  }
+#+end_src
+
+#+caption: Clases para el jugador
+#+label: fig:player-class
+#+attr_latex: :scale 0.75
+#+results:
+[[file:imgs/player_class.png]]
+
+
+* Correr
+
+#+begin_src bash
+nimble build
+#+end_src
+
+#+RESULTS:
+| Verifying | dependencies | for   | snl@0.1.0 |         |
+| Building  | snl/snlPlay  | using | c         | backend |
+| Building  | snl/snlMod   | using | c         | backend |
+
+Que crea dos ejecutables
