@@ -16,41 +16,40 @@ anteriormente.
 
 #+begin_src mermaid :file imgs/mod_class.png
 classDiagram
-
-  class Trap {
-    -Tuple~int,int~ j
-    +goesUp() bool
-    +goesDown() bool
-  }
-
   class Board {
-    -Tuple~int,int~ dims
-    -Seq~Trap~ traps
+    -tuple~int,int~ dims
+    -seq~Option:int~ traps
     +newBoard(dims,traps) Board
-    +dims() Tuple~int,int~
+    +dims() tuple~int,int~
     +hasTrap(pos) bool
+    +applyTrap(pos) Option~int~
   }
 
   class Player {
     -string name
     -int pos
-    -bool isWinner
+    -tuple~int~ dims
     -Socket conn
-    +newPlayer(name) Player
-    +advance(int)
+    +newPlayer(name, dims, conn) Player
+    +advance(steps)
     +isWinner() bool
   }
 
   class Mod {
     -Board b
     -Seq~Player~ players
+    -int currPlayer
     -Rand dice
     -nextTurn()
-    +newMod(int,int) Mod
-    +register(int)
+    +newMod(port,seed, num, dims) Mod
+    +waitForPlayers(port)
     +play()
   }
+
+  Board --> Mod
+  Player --> Mod
 #+end_src
+
 
 #+caption: Clases para el moderador
 #+label: fig:mod-class
@@ -60,12 +59,11 @@ classDiagram
 
 #+begin_src mermaid :file imgs/player_class.png
 classDiagram
-
   class Player {
     -string name
     -Socket conn
-    +newPlayer(string) Player
-    +register(int)
+    +newPlayer(name) Player
+    +joinGame(port)
     +play()
   }
 #+end_src
@@ -79,13 +77,19 @@ classDiagram
 
 * Correr
 
-#+begin_src bash
+#+begin_src bash :export code
 nimble build
 #+end_src
 
-#+RESULTS:
-| Verifying | dependencies | for   | snl@0.1.0 |         |
-| Building  | snl/snlPlay  | using | c         | backend |
-| Building  | snl/snlMod   | using | c         | backend |
+Que crea dos ejecutables. ~snlMod~ es el programa que para el moderador que
+levante el servidor para jugar. ~snlPlay~ es el programa para los jugadore que
+se conectarán al servidor del moderador.
 
-Que crea dos ejecutables
+* Pruebas
+
+#+begin_src bash :export code
+nimble test
+#+end_src
+
+Las pruebas están hechas con el paquete ~unittest~. De momento no hay pruebas
+para los sockets.
