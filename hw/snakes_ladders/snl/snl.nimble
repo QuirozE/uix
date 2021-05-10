@@ -5,7 +5,7 @@ author        = "Edgar Quiroz"
 description   = "Simple text only snakes and ladders"
 license       = "MIT"
 srcDir        = "src"
-namedBin      = {"mod":"snlMod", "player": "snlPlay"}.toTable()
+namedBin      = {"moder":"snlMod", "player": "snlPlay"}.toTable()
 
 
 # Dependencies
