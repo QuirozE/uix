@@ -1,0 +1,32 @@
+#+title: Diseño de Interfaces de Usuario
+
+* Temario
++ Repaso de UML
+
+* Evaluación
+
+** PROJ Projecto final
+DEADLINE: <2021-08-17 Tue>
+Se evaluará todo el curso con un proyecto final a entregar entre una o dos
+personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente
+[[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay
+que hacer solamente los html de las vistas es decir, puras pantallas sin funcionamiento
+
+*** TODO Revisar recursos
+SCHEDULED: <2021-07-12 Mon>
+*** TODO Perfil de usuario [/]
++ [ ] Mapa de empatía
++ [ ] Artefacto persona
+*** TODO Casos de uso [/]
++ [ ] Diagramas UML
+*** TODO Contexto de uso de la aplicación
+*** TODO Mapa de navegación de la aplicación
+*** TODO Wireframes
+*** TODO Criterios ergonómicos
+*** TODO Colores
+*** TODO Interacción
+*** TODO Cuestionarios
+
+* Horario
+
+** UIX Profesor <2021-07-14 Wed 9:00-10:00 +1w>
