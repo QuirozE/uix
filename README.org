@@ -1,20 +1,29 @@
 #+title: Diseño de Interfaces de Usuario
 
-* Temario
-+ Repaso de UML
-
 * Evaluación
-
-** PROJ Projecto final
+** PROJ Projecto final [1/11]
 DEADLINE: <2021-08-17 Tue>
 Se evaluará todo el curso con un proyecto final a entregar entre una o dos
 personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente
 [[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay
-que hacer solamente los html de las vistas es decir, puras pantallas sin funcionamiento
+que hacer solamente los html de las vistas es decir, puras pantallas sin
+funcionamiento
 
-*** TODO Revisar recursos
-SCHEDULED: <2021-07-12 Mon>
+*** DONE Revisar recursos [3/3]
+CLOSED: [2021-07-15 Thu 23:12] SCHEDULED: <2021-07-12 Mon>
+:LOGBOOK:
+CLOCK: [2021-07-15 Thu 22:46]--[2021-07-15 Thu 23:12] =>  0:26
+CLOCK: [2021-07-15 Thu 22:16]--[2021-07-15 Thu 22:41] =>  0:25
+CLOCK: [2021-07-15 Thu 16:30]--[2021-07-15 Thu 16:55] =>  0:25
+CLOCK: [2021-07-15 Thu 15:55]--[2021-07-15 Thu 16:20] =>  0:25
+:END:
++ [X] Mapas de empatía
++ [X] Perfiles de usuario
++ [X] Mapa de navegación
+*** TODO Revisar Karax
+SCHEDULED: <2021-07-16 Fri 14:00>
 *** TODO Perfil de usuario [/]
+SCHEDULED: <2021-07-18 Sun 08:00>
 + [ ] Mapa de empatía
 + [ ] Artefacto persona
 *** TODO Casos de uso [/]

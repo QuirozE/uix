@@ -2,8 +2,39 @@
 #+author: Edgar Quiroz
 #+language: es
 #+latex_header: \usepackage[spanish]{babel}
-#+latex_header: \usepackage{arev}
-#+latex_header: \usepackage[margin=1.5cm]{geometry}
+
+* Interacciones Humano-Máquina
+
+Estudia el diseño, evaluación e implementación de sistemas computacionales
+interactivos. En otras palabras, mecanismos para comunicarse con una máquina.
+
+*Interacción*: acción recíproca entre dos o más agentes
+
+Gran parte del éxito de un sistema está dado por que tan *seguro*, *útil*,
+*eficaz* y *usable* es. Esto toma lugar en *interfaces*.
+
++ *Seguro*: robusto a ataques
++ *Útil*:
++ *Eficaz*: hace el software productivo y ahorra costos de capacitación.
++ *Úsabilidad*: se sencillo e intuitivo.
+
+*Tarea*: diseñar reglas para jugar serpientes y escaleras usando únicamente
+texto.
+
+Para llegar a mecanismos con estas características, en general se estudia como
+interactúan las personas interractúan con su ambiente y con otras personas, e
+intentar replicarla.
+
+** Algo de historia
+
+Un ejemplo sería la *ENIAC*. Ésta se configuraba con más de 6000 interruptores.
+Para usarla había que tener un conocimiento muy profundo de la aquitectura de la
+máquina, y modificaciones a su funcionamiento tomaba semanas.
+
+Una mejora a esto fue la introducción de *teletipos* (con tarjetas perforadas).
+Esto facilitaba la forma de modificar el software de la máquina.
+En 1968, Xerox creó la primera *interfaz gráfica*. Poseía un mouse, ventanas,
+íconos y menúes.
 
 * UML
 
@@ -61,8 +92,74 @@ Determinar las funcionalidades requiere un *análisis de requerimientos*.
 *Nota*: el análisis de requerimientos es un buen punto de partida para diseñar
 una interfaz, aunque es algo bastante posterior.
 
+* Elementos de una interfaz gráfica
+Los usuarios van a *interactuar* con la interfaz gráfica para realizar alguna
+*tarea*. Esto implica *usuarios*, *contenido gráfico* y *tareas objetivo*.
 
-* Generalidades de usabilidad
+** Usuarios
+Tiene edad, escolaridad, conocimiento del tema a presentar, estilo de
+aprendizaje, nacionalidad, contexto socio-cultural, experiencia con equipos de
+cómputo, discapacides.
+
+Los usuarios necesitan realizar cientas tareas en la interfaz a diseñar.
+Definirlas claramente y hacer *pruebas de usabilidad* constante es importate.
+
+*** Artefactos de personas
+Usuario *ficticio* basado en datos de usuarios reales. Normalmente, se
+*segmentan* los usuarios en base a caracteristicas comunes. A cada segmento se
+le asocian dos o tres artefactos de personas. De forma realista, las personas no
+suelen usar toda la funcionalidad del sistema. Esta técnica no puede reemplazar
+interacción con usuarios *reales*.
+
+Algunos datos útiles podrían ser
++ Fotografía
++ Demografía: edad, puesto de trabajo, residencia, estado civil
++ Disponibilidad de tecnología
++ Motivaciones: hobbies
++ Limitaciones: discapacidades
+
+Al realizar cambios a la interfaz, hay que tener en cuenta como afectaría a
+estas personas ficticias.
+
+*** Diagramas de empatía
+Describen las *emociones* de los usuarios en seis categorías. Estos usuarios
+suelen ser artefactos de persona.
+
++ Vista: cuál es su cotiniadidad, su círculo social
++ Oído: que lo influencia, ídolos, marcas favoritas, que productos consume
++ Pensamientos: preocupaciones, sueños, autopercepción
++ Habla: hobbies, personalidad
++ Dolor: miedos, frustraciones, obstáculos
++ Necesidad: concepto del éxito, objetivo, solución a sus problemas
+
+Después de tener los mapas de empatía para los artefactos, es útil *validarlos*
+contra dato estadísticos de usuarios reales.
+
+** Contenido
+Se debe tomar en cuenta el *propósito* de la interfaz. Entre más *restrigido*
+sea, más *sencillo* debería ser el diseño. Además de esto,se debe definir el
+formato y *cantidad de información* a mostrar, favoreciendo lo más breve.
+
+*** Navegación
+Representa el mapa de las *posibles pantallas* de la interfaz y a dónde pueden
+llevar. Permiten ver la *organización de la información* y detectar más
+facilmente posibles problemas estrucuturales, como *desbalance*. Cuando los
+proyectos están enfocados a *funcionalidades* (esto es más típico de las
+Intranets y Extranets) se suele usar un *diagrama de interacción* como
+sustituto.
+
+Algunos tipos son:
+  - Lineal: solo página siguiente y página anterior. Útil cuando se tiene una
+     única tarea.
+  - Estrella: solo página inicial que puede acceder y es accesible desde todas
+     las demás
+  - Arborescente: árbol definido por una jerarquía de información
+  - Múltiple: todos accesibles desde todos
+  - Red: se puede navegar entre temas similares sin restricciones estrucuturales
+  - Metafórica: simulaciones de espacios reales usano simbolos familiares.
+
+* Evaluación y consideraciones
+** Generalidades de usabilidad
 
 Segun la *ISO/IEC9241-11*, es una medidad sobre que tan útil es un producto de
 software para que cierto grupo de usuarios para realizar actividades especificos
@@ -127,36 +224,3 @@ Si se logra un buen diseño, se tendrá como corolario que
 + Se podrá mandar un mensaje emocional a los usuarios
 
 *Tarea*: leer artículo, probar aplicación y proponer mejoras.
-
-* Interacciones Humano-Máquina
-
-Estudia el diseño, evaluación e implementación de sistemas computacionales
-interactivos. En otras palabras, mecanismos para comunicarse con una máquina.
-
-*Interacción*: acción recíproca entre dos o más agentes
-
-Gran parte del éxito de un sistema está dado por que tan *seguro*, *útil*,
-*eficaz* y *usable* es. Esto toma lugar en *interfaces*.
-
-+ *Seguro*: robusto a ataques
-+ *Útil*:
-+ *Eficaz*: hace el software productivo y ahorra costos de capacitación.
-+ *Úsabilidad*: se sencillo e intuitivo.
-
-*Tarea*: diseñar reglas para jugar serpientes y escaleras usando únicamente
-texto.
-
-Para llegar a mecanismos con estas características, en general se estudia como
-interactúan las personas interractúan con su ambiente y con otras personas, e
-intentar replicarla.
-
-** Algo de historia
-
-Un ejemplo sería la *ENIAC*. Ésta se configuraba con más de 6000 interruptores.
-Para usarla había que tener un conocimiento muy profundo de la aquitectura de la
-máquina, y modificaciones a su funcionamiento tomaba semanas.
-
-Una mejora a esto fue la introducción de *teletipos* (con tarjetas perforadas).
-Esto facilitaba la forma de modificar el software de la máquina.
-En 1968, Xerox creó la primera *interfaz gráfica*. Poseía un mouse, ventanas,
-íconos y menúes.
