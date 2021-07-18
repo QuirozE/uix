@@ -5,41 +5,30 @@
 
 * Interacciones Humano-Máquina
 
-Estudia el diseño, evaluación e implementación de sistemas computacionales
-interactivos. En otras palabras, mecanismos para comunicarse con una máquina.
+Estudia el diseño, evaluación e implementación de sistemas computacionales interactivos. En otras palabras, mecanismos para comunicarse con una máquina.
 
 *Interacción*: acción recíproca entre dos o más agentes
 
-Gran parte del éxito de un sistema está dado por que tan *seguro*, *útil*,
-*eficaz* y *usable* es. Esto toma lugar en *interfaces*.
+Gran parte del éxito de un sistema está dado por que tan *seguro*, *útil*, *eficaz* y *usable* es. Esto toma lugar en *interfaces*.
 
 + *Seguro*: robusto a ataques
 + *Útil*:
 + *Eficaz*: hace el software productivo y ahorra costos de capacitación.
 + *Úsabilidad*: se sencillo e intuitivo.
 
-*Tarea*: diseñar reglas para jugar serpientes y escaleras usando únicamente
-texto.
+*Tarea*: diseñar reglas para jugar serpientes y escaleras usando únicamente texto.
 
-Para llegar a mecanismos con estas características, en general se estudia como
-interactúan las personas interractúan con su ambiente y con otras personas, e
-intentar replicarla.
+Para llegar a mecanismos con estas características, en general se estudia como interactúan las personas interractúan con su ambiente y con otras personas, e intentar replicarla.
 
 ** Algo de historia
 
-Un ejemplo sería la *ENIAC*. Ésta se configuraba con más de 6000 interruptores.
-Para usarla había que tener un conocimiento muy profundo de la aquitectura de la
-máquina, y modificaciones a su funcionamiento tomaba semanas.
+Un ejemplo sería la *ENIAC*. Ésta se configuraba con más de 6000 interruptores. Para usarla había que tener un conocimiento muy profundo de la aquitectura de la máquina, y modificaciones a su funcionamiento tomaba semanas.
 
-Una mejora a esto fue la introducción de *teletipos* (con tarjetas perforadas).
-Esto facilitaba la forma de modificar el software de la máquina.
-En 1968, Xerox creó la primera *interfaz gráfica*. Poseía un mouse, ventanas,
-íconos y menúes.
+Una mejora a esto fue la introducción de *teletipos* (con tarjetas perforadas). Esto facilitaba la forma de modificar el software de la máquina. En 1968, Xerox creó la primera *interfaz gráfica*. Poseía un mouse, ventanas, íconos y menúes.
 
 * UML
 
-En cualquier intento colaborativo para desarrollar software debe haber una forma
-de *especificar* que se va a hacer. Hay dos casos extremos potencialmente
+En cualquier intento colaborativo para desarrollar software debe haber una forma de *especificar* que se va a hacer. Hay dos casos extremos potencialmente
 problemáticos. Primero en *equipos grandes* y multidisciplinario. Aquí la
 comunicación directa no es práctica, y las diferentes áreas de todos no permiten
 usar lenguaje técnico. El otro caso sería cuando hay un *proyecto grande*, tal
