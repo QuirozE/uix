@@ -1,13 +1,9 @@
 #+title: Diseño de Interfaces de Usuario
 
 * Evaluación
-** PROJ Projecto final [1/11]
+** PROJ Projecto final [2/12]
 DEADLINE: <2021-08-17 Tue>
-Se evaluará todo el curso con un proyecto final a entregar entre una o dos
-personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente
-[[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay
-que hacer solamente los html de las vistas es decir, puras pantallas sin
-funcionamiento
+Se evaluará todo el curso con un proyecto final a entregar entre una o dos personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente [[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay que hacer solamente los html de las vistas es decir, puras pantallas sin funcionamiento
 
 *** DONE Revisar recursos [3/3]
 CLOSED: [2021-07-15 Thu 23:12] SCHEDULED: <2021-07-12 Mon>
@@ -20,8 +16,18 @@ CLOCK: [2021-07-15 Thu 15:55]--[2021-07-15 Thu 16:20] =>  0:25
 + [X] Mapas de empatía
 + [X] Perfiles de usuario
 + [X] Mapa de navegación
-*** TODO Revisar Karax
-SCHEDULED: <2021-07-16 Fri 14:00>
+*** DONE Revisar Karax
+CLOSED: [2021-07-16 Fri 19:12] SCHEDULED: <2021-07-16 Fri 14:00>
+*** TODO Aprender desarrollo web [1/2]
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started][Getting started with HTML - Learn web development | MDN]]
+CLOSED: [2021-07-16 Fri 23:50]
+:LOGBOOK:
+CLOCK: [2021-07-16 Fri 23:24]--[2021-07-16 Fri 23:49] =>  0:25
+CLOCK: [2021-07-16 Fri 21:31]--[2021-07-16 Fri 21:57] =>  0:26
+CLOCK: [2021-07-16 Fri 19:16]--[2021-07-16 Fri 19:41] =>  0:25
+:END:
+**** TODO [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML][What’s in the head? Metadata in HTML - Learn web development | MDN]]
+SCHEDULED: <2021-07-17 Sat 21:00>
 *** TODO Perfil de usuario [/]
 SCHEDULED: <2021-07-18 Sun 08:00>
 + [ ] Mapa de empatía
