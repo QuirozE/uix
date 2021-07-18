@@ -1,0 +1,161 @@
+#+title: Front-end web developer
+#+subtitle: Learn web development | MDN
+
+[[https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer][Front-end web developer - Learn web development | MDN]]
+
+* Semantics and structure
+** HTML Basics
+*** Elements
+HTML language is made up of elements with either of the following syntax
+
+#+begin_src html
+<tag>
+<tag> content </tag>
+#+end_src
+
+Tags give a meaning to the content. The content can either be nothing, text, or more elements. The resulting element tree defines the website structure. Elements with no content are called void.
+
+Elements have [[https://html.spec.whatwg.org/multipage/indices.html#element-content-categories][categories]] that define their visual representation. Visually, they can be more simply divided into block elements, wich create new lines, and inline elements.
+
+Attributes add information to elements, though it won't affect their HTML meaning. Those attributes can be used by other tools for styling or interactivity. They have the following syntax.
+
+#+begin_src html
+<tag attr1="value1" attr2="value2" boolattr> content </tag>
+#+end_src
+
+The last attributes would be boolean. They must have their own name as a value. As a shorthand, the value can be omitted.
+
+*** File structure
+All HTML files should have the same root structure.
+
+#+begin_src html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+  </head>
+  <body>
+    Content
+  </body>
+</html>
+#+end_src
+
+Whitespace is ignored. It is nice for readability to indent nested elements, among other things.
+
++ ~<!DOCTYPE html>~: for backwards compatibility. It used to be a link to HTML specification.
++ ~<html>~: harcoded root. Defining langage will improve indexing.
++ ~<head>~: configuration, i.e. everytinh that is not content.
++ ~<meta charset>~: defines charset. Not mandatory, but it will solve common bugs.
++ ~<title>~: title to show in bookmarks and browser tabs.
++ ~<body>~: parent of all content.
+
+*** Special characters
+
+~<, >, ", ',&~ are HTML reserved characters. As long as UTF8 encoding is used, any other character in content shouldn't cause any problem. To have these symbols as content, a special [[https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references][reference]] is needed.
+
+| Character | Reference |
+|-----------+-----------|
+| ~<~       | ~&lt;~    |
+| ~>~       | ~&gt;~    |
+| ~"~       | ~&quot;~  |
+| ~'~       | ~&apos;~  |
+| ~&~       | ~&amp;~   |
+
+Other than elements, there can be comments. These are merely for readability.
+
+#+begin_src html
+<!-- comment -->
+<!--
+    Anything inside will be ignored!
+    -->
+#+end_src
+
+*** Metadata
+In the previous section, a ~<meta>~ tag was used to specify the character set. This tag is used to specify the document metadata. Other than the chararcter set, it can have a ~name~ an ~content~ attributes. This is used for descriptions, authors, or other data to help classify the file.
+
+#+begin_src html
+<meta name="description" content="Google search description">
+#+end_src
+
+The description is actually used by search engines. Different sites use matadata for custom purposes. Facebook's [[https://ogp.me/][Open Graph protocol]] allows a nicer rendering while linking the site on Facebook. Twitter has something [[https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards][similar]].
+
+*** External resources
+The ~<link>~ tag allows to specify the location of external elements to be mae available to the file. It has a ~rel~ attribut to specify the type of resource, and a ~href~ to specify the location.
+
+For example, to a specify the icon to be used in bookmarks ("favorites" icon, /favicon/), the rel value must be ~icon~.
+
+#+begin_src html
+<link rel="icon" href="path/to/icon">
+#+end_src
+
+Another common usage is to specify stylesheets. In this case, ~rel="stylesheet"~. The ~href~ attribute must then point to a CSS file.
+
+Finally, the last common resource is a script, with the following tag
+
+#+begin_src html
+<script>
+code();
+</script>
+<script src="script_file.js" defer></script>
+#+end_src
+
+The script tag may contain the script directly, or just point to the script file. In the later case, the ~defer~ attribute signals the script must be loaded last. This is to prevent the script from using things before they are loaded.
+
+*** Text
+Structure in text gives order and improves readability and indexing. This structure is also used for styling. In HTML, basic hierarchical structure is given by headings.
+
+#+begin_src html
+<h1> Main heading </h1>
+<h2> Sub heading </h2>
+<h3> Less important heading </h3>
+<h4> The pattern continues </h4>
+<h5> How long? </h5>
+<h6> Not much </h6>
+#+end_src
+
+Text is processed as one long line. To give a nicer structure, it can be diveded into paragraphs. They usually insert a new line.
+
+#+begin_src html
+All these
+words will be a
+single line
+<p> But this will be a new line </p>
+#+end_src
+
+Other than headings and text, HTML supports lists. Both orered and unordered. List elements must be inside a ~<li>~ (list element) tag. Ordered list use the tag ~<ol>~ and unordered ones use ~<ul>~.
+
+#+begin_src html
+<ul>
+  <li> some </li>
+  <li> elements </li>
+  <li> with </li>
+  <li> no </li>
+  <li> order </li>
+</ul>
+
+<ol>
+  <li> now </li>
+  <li> there </li>
+  <li> is </li>
+  <li> order </li>
+</ol>
+#+end_src
+
+Finally, to give emphasis to a phrase, there are the inline tags ~<em>~ and ~<strong>~.
+
+#+begin_src html
+This is something you <em> should </em> know
+But that is quite <string>dangerous</strong>.
+#+end_src
+
+The ~<u>,<i>,<b>~ were used before CSS. In general they shouldn't be used. The exceptions are where their styles are generally accepte as semantic. For example, italized foreign words, bold keywords or underlines misspellings. When in doubt, do not use them.
+
+** Media Embedding
+** Tables
+
+* Styling and layout
+* Interactivity
+* Forms
+* Accesibility
+* Tooling
