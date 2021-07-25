@@ -1,7 +1,7 @@
 #+title: Diseño de Interfaces de Usuario
 
 * Evaluación
-** PROJ Projecto final [2/12]
+** PROJ Projecto final [4/11]
 DEADLINE: <2021-08-17 Tue>
 Se evaluará todo el curso con un proyecto final a entregar entre una o dos personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente [[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay que hacer solamente los html de las vistas es decir, puras pantallas sin funcionamiento
 
@@ -18,7 +18,7 @@ CLOCK: [2021-07-15 Thu 15:55]--[2021-07-15 Thu 16:20] =>  0:25
 + [X] Mapa de navegación
 *** DONE Revisar Karax
 CLOSED: [2021-07-16 Fri 19:12] SCHEDULED: <2021-07-16 Fri 14:00>
-*** TODO Aprender desarrollo web [1/2]
+*** TODO Aprender desarrollo web [4/5]
 **** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started][Getting started with HTML - Learn web development | MDN]]
 CLOSED: [2021-07-16 Fri 23:50]
 :LOGBOOK:
@@ -26,21 +26,48 @@ CLOCK: [2021-07-16 Fri 23:24]--[2021-07-16 Fri 23:49] =>  0:25
 CLOCK: [2021-07-16 Fri 21:31]--[2021-07-16 Fri 21:57] =>  0:26
 CLOCK: [2021-07-16 Fri 19:16]--[2021-07-16 Fri 19:41] =>  0:25
 :END:
-**** TODO [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML][What’s in the head? Metadata in HTML - Learn web development | MDN]]
-SCHEDULED: <2021-07-17 Sat 21:00>
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML][What’s in the head? Metadata in HTML - Learn web development | MDN]]
+CLOSED: [2021-07-18 Sun 00:27] SCHEDULED: <2021-07-17 Sat 21:00>
+:LOGBOOK:
+CLOCK: [2021-07-17 Sat 23:54]--[2021-07-18 Sun 00:21] =>  0:27
+CLOCK: [2021-07-17 Sat 22:56]--[2021-07-17 Sat 23:23] =>  0:27
+:END:
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals][HTML text fundamentals - Learn web development | MDN]]
+CLOSED: [2021-07-18 Sun 00:54]
+:LOGBOOK:
+CLOCK: [2021-07-18 Sun 00:27]--[2021-07-18 Sun 00:54] =>  0:27
+:END:
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks][Creating hyperlinks - Learn web development | MDN]]
+CLOSED: [2021-07-18 Sun 23:04] SCHEDULED: <2021-07-18 Sun 22:00>
+:LOGBOOK:
+CLOCK: [2021-07-18 Sun 22:37]--[2021-07-18 Sun 23:03] =>  0:26
+CLOCK: [2021-07-18 Sun 22:05]--[2021-07-18 Sun 22:31] =>  0:26
+:END:
+**** TODO [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting][Advanced text formatting - Learn web development | MDN]]
+SCHEDULED: <2021-07-21 Wed 22:00>
+*** DONE Casos de uso [1/1]
+CLOSED: [2021-07-21 Wed 13:23]
+:LOGBOOK:
+CLOCK: [2021-07-21 Wed 12:47]--[2021-07-21 Wed 13:15] =>  0:28
+CLOCK: [2021-07-21 Wed 12:01]--[2021-07-21 Wed 12:26] =>  0:25
+CLOCK: [2021-07-21 Wed 10:33]--[2021-07-21 Wed 10:59] =>  0:26
+:END:
++ [X] Diagramas UML
+*** DONE Contexto de uso de la aplicación
+CLOSED: [2021-07-21 Wed 12:44]
 *** TODO Perfil de usuario [/]
-SCHEDULED: <2021-07-18 Sun 08:00>
+SCHEDULED: <2021-07-22 Thu 21:30>
 + [ ] Mapa de empatía
 + [ ] Artefacto persona
-*** TODO Casos de uso [/]
-+ [ ] Diagramas UML
-*** TODO Contexto de uso de la aplicación
-*** TODO Mapa de navegación de la aplicación
-*** TODO Wireframes
-*** TODO Criterios ergonómicos
-*** TODO Colores
-*** TODO Interacción
-*** TODO Cuestionarios
+*** TODO Mapa de navegación de la aplicación [/]
++ [ ] Justificar criterios ergonómicos
+*** TODO Wireframes [/]
++ [ ] Justificar criterios ergonómicos
+*** TODO Colores [/]
++ [ ] Justificar criterios ergonómicos
+*** TODO Interacción [/]
++ [ ] Justificar criterios ergonómicos
+*** TODO Cuestionarios [/]
 
 * Horario
 

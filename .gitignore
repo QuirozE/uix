@@ -284,4 +284,4 @@ TSWLatexianTemp*
 #*Notes.bib
 
 # Ingore generated LaTex files
-*.tex
+# *.tex
