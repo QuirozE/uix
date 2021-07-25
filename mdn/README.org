@@ -146,10 +146,76 @@ Finally, to give emphasis to a phrase, there are the inline tags ~<em>~ and ~<st
 
 #+begin_src html
 This is something you <em> should </em> know
-But that is quite <string>dangerous</strong>.
+But that is quite <strong>dangerous</strong>.
 #+end_src
 
 The ~<u>,<i>,<b>~ were used before CSS. In general they shouldn't be used. The exceptions are where their styles are generally accepte as semantic. For example, italized foreign words, bold keywords or underlines misspellings. When in doubt, do not use them.
+
+*** Links
+Up to now, the pages are just nicely structured text. But what makes the internet a network are its links. They allow to move and fetch content from anywhere. Naturally, they are elements.
+
+#+begin_src html
+<a href="path/to/content" title="Best website ever" targer="_blank">
+  Text to be used as link. Any element can be a link.
+</a>
+#+end_src
+
+~href~ is the URL of the content, and ~title~ just a description. ~target~ attribute indicates how the link should be opened. ~"_blank"~ will open it in a new tab. If the content is to be downloaded, an attribute ~download~ can give it a default name.
+
+If the content needs to be opene with an external program, the browser will try to open it. For example, prefixing ~mailto:~ will open an email client with the rest of the link as address. Links can also point to elements. To allow this, the element must have an ~id~ attribute. Then its references by ~"document#id"~.
+
+#+begin_src html
+<h2 id="mail" href="mailto:some@one.com">Mailing address</h2>
+<p> Please direct all your doubts to our <a href="#mail"> mailing address </a>
+#+end_src
+
+As a general rule, make links self explenatory yet concise even without context. Be explicit when the content is not HTML. This will make them effective for indexing or screen readers.
+
+*** More text
+There are other tags to structure text. They are more specialized and less common, but nevertheless useful.  First, description lists allow you the enumerate concepts and their definitions. The list must be enclosed by ~<dl>~ tags. Each concept uses a ~<dt>~ (description term) and their definitions a ~<dd>~.
+
+#+begin_src html
+<dl>
+  <dt> Item</dt>
+  <dd> Definition</dd>
+  <dd> Other definition</dd>
+  <dt> Other item</dt>
+  <dd> Another definition</dd>
+</dl>
+#+end_src
+
+There are also quotes. Both paragraphs and inline text can be quoted.  The attribute ~cite~ isn't used in any standard way. The ~<cite>~ element is meat only to wrap the title of the resouce. Finally, abbreviations are used to expand acronyms (given by their ~title~ attribute) by hovering over them.
+
+#+begin_src html
+It is important to note that according to <cite>someone</cite>.
+
+<blockquote cite="path/to/source">
+  Someone else said this
+</blockquote>
+
+But someone else said <q cite="path">something</q> shorte.
+Wich <abbr title="In My Humble Opinion">IMHO</abbr>, is correct.
+#+end_src
+
+Code can be represented in text with ~<code>~, and whitespace is preserved inside ~<pre>~. Other than this, ~<var>~ references variables (more control over using ~<code>~?), ~<kbd>~ is used for key codes and ~<samp>~ to wrap program output.
+
+#+begin_src html
+<pre><code>var para = document.querySelector('p');</code></pre>
+
+<var>para</var> represents a paragraph element.
+
+Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+
+<pre>$ <code>ping mozilla.org</code>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+#+end_src
+
+Finally, ~<time>~ allows a unabiguous way to specify dates using a ~datetime~ attribute with a [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values][valid date format]].
+
+#+begin_src html
+<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+#+end_src html
 
 ** Media Embedding
 ** Tables
