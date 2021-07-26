@@ -1,9 +1,0 @@
-    @startuml
-    !theme plain
-    left to right direction
-    actor estudiante
-    rectangle AEL {
-      usecase (Visualizar cálculo de interés compuesto) as viz
-    }
-    estudiante --> viz
-    @enduml
