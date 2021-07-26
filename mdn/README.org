@@ -142,11 +142,13 @@ Other than headings and text, HTML supports lists. Both orered and unordered. Li
 </ol>
 #+end_src
 
-Finally, to give emphasis to a phrase, there are the inline tags ~<em>~ and ~<strong>~.
+Linebreaks are forced with the void tag ~<br>~, and horizontal lines with ~<hr>~. Finally, to give emphasis to a phrase, there are the inline tags ~<em>~ and ~<strong>~.
 
 #+begin_src html
-This is something you <em> should </em> know
+This is something you <em> should </em> know. <br>
 But that is quite <strong>dangerous</strong>.
+<hr>
+In other new, ...
 #+end_src
 
 The ~<u>,<i>,<b>~ were used before CSS. In general they shouldn't be used. The exceptions are where their styles are generally accepte as semantic. For example, italized foreign words, bold keywords or underlines misspellings. When in doubt, do not use them.
@@ -155,7 +157,10 @@ The ~<u>,<i>,<b>~ were used before CSS. In general they shouldn't be used. The e
 Up to now, the pages are just nicely structured text. But what makes the internet a network are its links. They allow to move and fetch content from anywhere. Naturally, they are elements.
 
 #+begin_src html
-<a href="path/to/content" title="Best website ever" targer="_blank">
+<a
+  href="path/to/content"
+  title="Best website ever"
+  target="_blank">
   Text to be used as link. Any element can be a link.
 </a>
 #+end_src
@@ -187,35 +192,60 @@ There are other tags to structure text. They are more specialized and less commo
 There are also quotes. Both paragraphs and inline text can be quoted.  The attribute ~cite~ isn't used in any standard way. The ~<cite>~ element is meat only to wrap the title of the resouce. Finally, abbreviations are used to expand acronyms (given by their ~title~ attribute) by hovering over them.
 
 #+begin_src html
-It is important to note that according to <cite>someone</cite>.
+It is important to note that according to
+<cite>someone</cite>.
 
 <blockquote cite="path/to/source">
   Someone else said this
 </blockquote>
 
-But someone else said <q cite="path">something</q> shorte.
-Wich <abbr title="In My Humble Opinion">IMHO</abbr>, is correct.
+But someone else said <q cite="path">something</q>
+shorter.
+Wich <abbr title="In My Humble Opinion">IMHO</abbr>,
+is correct.
 #+end_src
 
 Code can be represented in text with ~<code>~, and whitespace is preserved inside ~<pre>~. Other than this, ~<var>~ references variables (more control over using ~<code>~?), ~<kbd>~ is used for key codes and ~<samp>~ to wrap program output.
 
 #+begin_src html
-<pre><code>var para = document.querySelector('p');</code></pre>
+<pre><code>
+var para = document.querySelector('p');
+</code></pre>
 
 <var>para</var> represents a paragraph element.
 
-Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+Select all the text with
+<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
 
 <pre>$ <code>ping mozilla.org</code>
-<samp>PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+<samp>
+PING mozilla.org (63.245.215.20):
+56 data bytes
+64 bytes from 63.245.215.20:
+icmp_seq=0 ttl=40 time=158.233 ms
+</samp></pre>
 #+end_src
 
-Finally, ~<time>~ allows a unabiguous way to specify dates using a ~datetime~ attribute with a [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values][valid date format]].
+~<time>~ allows a unabiguous way to specify dates using a ~datetime~ attribute with a [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values][valid date format]].
 
 #+begin_src html
-<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
-#+end_src html
+<time
+datetime="2016-01-20T19:30">
+7.30pm, 20 January 2016
+</time>
+#+end_src
+
+Finally, there are some non-semantic tags used for styling. That is, tags that aren't used by HTML, but can be used by CSS or Javascript. ~<div>~ wraps blocks and ~<span>~ an inline element. They have a ~class~ attribute to make some kind of classification used by the other tools. They say nothing about the elements, so their usage should be minimize. Use only if there is no other appropriate tag.
+
+*** Website structure
+HTML provides tags to create common strucutural elements of website bodies.
++ ~<header>~:  big strip of text on the top of the page, unchanged between different pages of the same website. Usually has a logo and a slogan.
++ ~<nav>~: navigation menu. Fast access to other pages in the website. Usually it is part of the header, but having it separated can help accessibility.
++ ~<aside>~: secondary menu. Usually for related link depending on the content of each page.
++ ~<main>~: wraps all the unique content of the page, once per page. Should be a child of ~<body>~. This can be further divided using the following tags
+  - ~<article>~: extra hierarchy inside ~<main>~. Should be self contained.
+  - ~<section>~: grups elements by functionality, like minimaps or a set of summaries.
++ ~<footer>~: strip of text at the bottom of each page. Doesn't change. Usually has useful but non-critical information about the website. Copyright, contact information, link to FAQ, about page.
 
 ** Media Embedding
 ** Tables

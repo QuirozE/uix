@@ -3,7 +3,7 @@
 * Evaluación
 ** PROJ Projecto final [4/11]
 DEADLINE: <2021-08-17 Tue>
-Se evaluará todo el curso con un proyecto final a entregar entre una o dos personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente [[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay que hacer solamente los html de las vistas es decir, puras pantallas sin funcionamiento
+Se evaluará todo el curso con un proyecto final a entregar entre una o dos personas. Se trabajará una propuesta de rediseño de interfaces para la siguiente [[http://sistemasusables.com/aplicacion/logaritmo/inicio.html][aplicación]]. Hay que hacer solamente los HTML de las vistas es decir, puras pantallas sin funcionamiento
 
 *** DONE Revisar recursos [3/3]
 CLOSED: [2021-07-15 Thu 23:12] SCHEDULED: <2021-07-12 Mon>
@@ -18,7 +18,7 @@ CLOCK: [2021-07-15 Thu 15:55]--[2021-07-15 Thu 16:20] =>  0:25
 + [X] Mapa de navegación
 *** DONE Revisar Karax
 CLOSED: [2021-07-16 Fri 19:12] SCHEDULED: <2021-07-16 Fri 14:00>
-*** TODO Aprender desarrollo web [4/5]
+*** TODO Aprender desarrollo frontend [9/10]
 **** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started][Getting started with HTML - Learn web development | MDN]]
 CLOSED: [2021-07-16 Fri 23:50]
 :LOGBOOK:
@@ -43,8 +43,17 @@ CLOSED: [2021-07-18 Sun 23:04] SCHEDULED: <2021-07-18 Sun 22:00>
 CLOCK: [2021-07-18 Sun 22:37]--[2021-07-18 Sun 23:03] =>  0:26
 CLOCK: [2021-07-18 Sun 22:05]--[2021-07-18 Sun 22:31] =>  0:26
 :END:
-**** TODO [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting][Advanced text formatting - Learn web development | MDN]]
-SCHEDULED: <2021-07-21 Wed 22:00>
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting][Advanced text formatting - Learn web development | MDN]]
+CLOSED: [2021-07-25 Sun 18:27] SCHEDULED: <2021-07-21 Wed 22:00>
+:LOGBOOK:
+CLOCK: [2021-07-25 Sun 11:44]--[2021-07-25 Sun 12:11] =>  0:27
+:END:
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure][Document and website structure - Learn web development | MDN]]
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML][Debugging HTML - Learn web development | MDN]]
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter][Marking up a letter - Learn web development | MDN]]
+**** DONE [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content][Structuring a page of content - Learn web development | MDN]]
+**** TODO [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML][Images in HTML - Learn web development | MDN]]
+SCHEDULED: <2021-07-26 Mon 21:00>
 *** DONE Casos de uso [1/1]
 CLOSED: [2021-07-21 Wed 13:23]
 :LOGBOOK:
@@ -70,5 +79,4 @@ SCHEDULED: <2021-07-22 Thu 21:30>
 *** TODO Cuestionarios [/]
 
 * Horario
-
 ** UIX Profesor <2021-07-14 Wed 9:00-10:00 +1w>
